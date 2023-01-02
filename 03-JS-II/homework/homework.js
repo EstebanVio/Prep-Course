@@ -124,7 +124,7 @@ function fizzBuzz(numero) {
   if (numero % 5 === 0){
     return "buzz";
   }
-  if (numero % 5 && 3 === 0){
+  if (numero % 5 && numero % 3 === 0){
     return "fizzbuzz";
   }
   else{
