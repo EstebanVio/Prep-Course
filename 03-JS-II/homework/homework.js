@@ -5,7 +5,10 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
-  if(x > y){
+  if (x === y){
+    return x || y;
+  }
+  else if(x > y){
     return x;
   }else{
     return y;
@@ -92,14 +95,23 @@ function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
-  return numero === 10 || numero === 5;
+ if(numero === 10 || numero === 5){
+  return true; }
+  else {
+    return false;
+  }
 }
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
-  return numero < 50 && numero > 20;
+ if (numero < 50 && numero > 20){
+  return true;
+ }
+ else{
+  return false;
+ }
 }
 
 function esEntero(numero) {
@@ -110,7 +122,13 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
-  return numero % 1 === 0;
+  if( numero % 1 === 0){
+    return true;
+
+  }
+  else{
+    return false;
+  }
 }
 
 function fizzBuzz(numero) {
@@ -214,10 +232,10 @@ function doWhile(numero) {
   var a = numero;
   var i = 0;
   do{
-    i = i + 1;
-    b = b + 5;
-  }while (i < 8){
-    return b;
+    i ++;
+    a = a + 5;
+  }while (i <= 8){
+    return a;
   }
 }
 
